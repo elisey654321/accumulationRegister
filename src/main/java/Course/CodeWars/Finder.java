@@ -3,7 +3,10 @@ package Course.CodeWars;
 public class Finder {
 
     public static boolean pathFinder(String maze) {
-        // Your code here!!
+
+        System.out.println(maze);
+
+
         return false;
     }
 
