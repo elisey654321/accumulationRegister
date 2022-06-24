@@ -8,11 +8,11 @@ class FinderTest {
     @Test
     public void sampleTests() {
 
-        String a = ".W.\n" +
-                ".W.\n" +
-                "...",
+        String a =  ".W.\n" +
+                    ".W.\n" +
+                    "...",
 
-                b = ".W.\n" +
+                b =     ".W.\n" +
                         ".W.\n" +
                         "W..",
 
@@ -44,11 +44,11 @@ class FinderTest {
                         "W.W..W.WWW.W.W\n"+
                         "WW......WW..W.\n";
 
-        assertEquals(true, Finder.pathFinder(a));
+//        assertEquals(true, Finder.pathFinder(a));
 //        assertEquals(false, Finder.pathFinder(b));
 //        assertEquals(true, Finder.pathFinder(c));
 //        assertEquals(false, Finder.pathFinder(d));
-//        assertEquals(false, Finder.pathFinder(e));
+        assertEquals(false, Finder.pathFinder(e));
     }
 
 }
