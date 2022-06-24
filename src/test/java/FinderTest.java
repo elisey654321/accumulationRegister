@@ -42,13 +42,20 @@ class FinderTest {
                         "........W.....\n"+
                         "W....W.....WW.\n"+
                         "W.W..W.WWW.W.W\n"+
-                        "WW......WW..W.\n";
+                        "WW......WW..W.\n",
+                f =     ".W...\n" +
+                        ".W...\n" +
+                        ".W.W.\n" +
+                        "...W.\n" +
+                        "...W.";
+
 
 //        assertEquals(true, Finder.pathFinder(a));
 //        assertEquals(false, Finder.pathFinder(b));
 //        assertEquals(true, Finder.pathFinder(c));
 //        assertEquals(false, Finder.pathFinder(d));
-        assertEquals(false, Finder.pathFinder(e));
+//        assertEquals(false, Finder.pathFinder(e));
+        assertEquals(true, Finder.pathFinder(f));
     }
 
 }

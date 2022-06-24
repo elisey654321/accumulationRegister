@@ -5,10 +5,13 @@ import java.util.*;
 public class Finder {
 
     public static boolean pathFinder(String maze) {
+        System.out.println(maze);
+
+
         String nMaze = maze.replace("\n","");
         Integer lengthMaze = Double.valueOf(Math.sqrt(Double.valueOf(nMaze.length()))).intValue();
         List<Node> nodes = new ArrayList<>();
-        Edge[] edges = new Edge[((nMaze.length()-1)*nMaze.length())/2];
+        Edge[] edges = new Edge[nMaze.length()*nMaze.length()];
 
         fillEdges(nMaze, lengthMaze, nodes, edges);
 
@@ -18,7 +21,7 @@ public class Finder {
         Edge edge = Edge.findEdge(nodes.get(0),nodes.get(nodes.size()-1),listEdges);
         edge.weight = Integer.MAX_VALUE;
 
-        calculateWeight(listEdges,new HashMap<Node,Node>(),edge,edge.node1);
+        calculateWeight(listEdges,new HashMap<Node,Node>(),edge,edge.node1,null);
 
         return !(edge.weight == Integer.MAX_VALUE);
     }
@@ -42,16 +45,19 @@ public class Finder {
                 boolean create = true;
                 for (int k = 0; k < edges.length; k++) {
                     if (edges[k] == null) break;
-                    if (edges[k].node1 == nodes.get(j) && edges[k].node2 == nodes.get(i)){
-                        create = false;
-                    }
+//                    if (edges[k].node1 == nodes.get(j) && edges[k].node2 == nodes.get(i)){
+//                        create = false;
+//                    }
                 }
                 if (nodes.get(j) == nodes.get(i)) create = false;
                 if (create) {
                     edges[count] = edge;
                     if (!edge.node2.value.equals("W")) {
-                        Integer delta = edge.node1.x - edge.node2.x + edge.node1.y - edge.node2.y;
-                        if (delta == -1 || delta == 1) edge.weight++;
+                        Integer deltaX = edge.node1.x - edge.node2.x;
+                        Integer deltaY = edge.node1.y - edge.node2.y;
+                        //if (delta == -1 || delta == 1) edge.weight++;
+                        if ((deltaX == -1 || deltaX == 1) && deltaY == 0) edge.weight++;
+                        if ((deltaY == -1 || deltaY == 1) && deltaX == 0) edge.weight++;
                     }else edge.weight = Integer.MAX_VALUE;
                     count++;
                 }
@@ -59,7 +65,8 @@ public class Finder {
         }
     }
 
-    private static void calculateWeight(List<Edge> edges, Map<Node,Node> way, Edge firstEdge, Node firstNode){
+    private static void calculateWeight(List<Edge> edges, Map<Node,Node> way, Edge firstEdge, Node firstNode, Edge nowEdge){
+
         Map<Node,Node> nWay = new HashMap<>(way);
 
         List<Edge> listEdges = new ArrayList<>();
@@ -67,6 +74,8 @@ public class Finder {
 
         for (int i = 0; i < listEdges.size(); i++) {
             Edge edge = listEdges.get(i);
+            if(edge == null) continue;
+            if (edge.weight == Integer.MAX_VALUE) continue;
             if (!edge.node2.value.equals("W") && !edge.node1.value.equals("W")) {
                 if (edge.node1 != firstNode)
                     continue;
@@ -76,10 +85,13 @@ public class Finder {
                         firstEdge.weight = nWay.size() > firstEdge.weight ? firstEdge.weight : nWay.size();
                     }
                     nWay.put(edge.node2, edge.node2);//listEdges.node2
-                    calculateWeight(edges, nWay, firstEdge, edge.node2);
+                    calculateWeight(edges, nWay, firstEdge, edge.node2,edge);
                 }
             }
         }
+        if (nowEdge == null) return;
+        //if (nowEdge.node2 != firstEdge.node2) nowEdge.weight = Integer.MAX_VALUE;
+
     }
 
     private static class Node{

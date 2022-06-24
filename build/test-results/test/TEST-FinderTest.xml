@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FinderTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-23T09:28:58" hostname="TECH-1C-04" time="0.018">
+<testsuite name="FinderTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-24T23:37:13" hostname="TECH-1C-04" time="19.56">
   <properties/>
-  <testcase name="sampleTests()" classname="FinderTest" time="0.018">
+  <testcase name="sampleTests()" classname="FinderTest" time="19.56">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1124)
-	at FinderTest.sampleTests(FinderTest.java:33)
+	at FinderTest.sampleTests(FinderTest.java:58)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -101,9 +101,11 @@
 	at java.lang.Thread.run(Thread.java:750)
 </failure>
   </testcase>
-  <system-out><![CDATA[.W.
-.W.
-...
+  <system-out><![CDATA[.W...
+.W...
+.W.W.
+...W.
+...W.
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
