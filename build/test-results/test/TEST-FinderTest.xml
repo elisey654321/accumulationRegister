@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FinderTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-24T23:37:13" hostname="TECH-1C-04" time="19.56">
+<testsuite name="FinderTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-06-25T18:36:39" hostname="TECH-1C-04" time="0.031">
   <properties/>
-  <testcase name="sampleTests()" classname="FinderTest" time="19.56">
+  <testcase name="sampleTests()" classname="FinderTest" time="0.031">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;true&gt; but was: &lt;false&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
