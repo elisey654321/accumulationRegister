@@ -6,15 +6,14 @@ import java.awt.event.ActionListener;
 public class test{
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("myWindow");
+        JFrame frame        = new JFrame("myWindow");
         Container container = new Container();
-        JButton button = new JButton("Please dont touch!");
-        ActionListener actionListener = new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("You touch button.");
-            }
+        JButton button      = new JButton("Please dont touch!");
+
+        ActionListener actionListener = (ActionEvent e) -> {
+            System.out.println("You touch button.");
         };
+
         button.addActionListener(actionListener);
 
         frame.add(button);
