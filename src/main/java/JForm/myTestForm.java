@@ -7,7 +7,6 @@ public class myTestForm {
 
     private JPanel panelMain;
     private JButton button_1;
-    private JTextField textField1;
 
     public myTestForm() {
 

@@ -16,9 +16,12 @@ public class test{
             System.out.println("You touch button.");
         };
 
+        Font font = new Font("",0,30);
+
         JTextField textField = new JTextField();
         textField.setText("my text");
         textField.setBounds(50,100,200,30);
+        textField.setFont(font);
 
         button.addActionListener(actionListener);
         button.setBounds(50,140,85,20);
