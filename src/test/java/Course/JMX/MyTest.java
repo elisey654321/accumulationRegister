@@ -6,6 +6,8 @@ import javax.management.ObjectName;
 import java.lang.management.ManagementFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 class MyTest {
 
