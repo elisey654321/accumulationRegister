@@ -23,7 +23,7 @@ public class newMaket extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        URL xmlUrl = getClass().getResource("/maket/LoginForm.fxml");
+        URL xmlUrl = getClass().getResource("/maket/swingButton.fxml");
         loader.setLocation(xmlUrl);
 
         Parent root = loader.load();

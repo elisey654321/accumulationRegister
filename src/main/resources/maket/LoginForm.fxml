@@ -100,10 +100,10 @@
             <Button fx:id="button" layoutX="249.0" layoutY="3.0" mnemonicParsing="false" onAction="#buttonClicked" prefHeight="60.0" prefWidth="110.0" text="Add">
 
             </Button>
-            <TableView fx:id="Table" layoutX="14.0" layoutY="77.0" prefHeight="295.0" prefWidth="620.0">
+            <TableView fx:id="Table" layoutX="14.0" layoutY="77.0" prefHeight="295.0" prefWidth="617.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="77.0">
               <columns>
                 <TableColumn fx:id="nameTC" prefWidth="309.0" text="Имя" />
-                <TableColumn fx:id="passwordTC" prefWidth="294.0" text="Пароль" />
+                <TableColumn fx:id="passwordTC" prefWidth="287.0" text="Пароль" />
               </columns>
             </TableView>
             <Button fx:id="refresh" layoutX="369.0" layoutY="3.0" mnemonicParsing="false" onAction="#buttonRefreshClicked" prefHeight="60.0" prefWidth="149.0" text="Refresh" />
