@@ -1,5 +1,6 @@
 
 import classes.Register;
+import javafx.stage.Stage;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,27 +13,33 @@ import static modules.getOpenSession.getOpenSession;
 
 public class main {
     public static void main(String[] args) {
+        System.out.println("test");
+//        newMaket newMaket = new newMaket();
+//
 
-        try {
-
-            Session session = getOpenSession();
+        Session session = getOpenSession();
             session.beginTransaction();
 
-            Register register = Register.builder().item("test").count(1).id(4).build();
-            NativeQuery sqlQuery = session.createSQLQuery(getQuery()).addEntity(Register.class);
-
-            ArrayList<Register> list = (ArrayList) sqlQuery.list();
-
-            for (Register reg:list) {
-                System.out.println("item: " + reg.getItem().replace("  ","") + "| count: " + reg.getCount());
-            }
-
-            session.getTransaction().commit();
-
-
-        }catch (Exception exception){
-            System.out.println(exception.getMessage());
-        }
+//        try {
+//
+//            Session session = getOpenSession();
+//            session.beginTransaction();
+//
+//            Register register = Register.builder().item("test").count(1).id(4).build();
+//            NativeQuery sqlQuery = session.createSQLQuery(getQuery()).addEntity(Register.class);
+//
+//            ArrayList<Register> list = (ArrayList) sqlQuery.list();
+//
+//            for (Register reg:list) {
+//                System.out.println("item: " + reg.getItem().replace("  ","") + "| count: " + reg.getCount());
+//            }
+//
+//            session.getTransaction().commit();
+//
+//
+//        }catch (Exception exception){
+//            System.out.println(exception.getMessage());
+//        }
 
 
     }
