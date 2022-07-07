@@ -26,6 +26,8 @@ dependencies {
 
     implementation group: 'com.intellij', name: 'forms_rt', version: '7.0.3'
 
+    implementation group: 'org.openjfx', name: 'javafx-fxml', version: '18'
+
 
 }
 
