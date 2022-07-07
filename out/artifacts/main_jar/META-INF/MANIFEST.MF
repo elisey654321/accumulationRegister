@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Main-Class: main
+Class-Path: jboss-transaction-api_1.2_spec-1.1.1.Final.jar junit-platfor
+ m-commons-1.7.2.jar hibernate-commons-annotations-5.1.2.Final.jar txw2-
+ 2.3.1.jar asm-tree-3.0.jar jboss-logging-3.4.3.Final.jar antlr-2.7.7.ja
+ r asm-commons-3.0.jar forms_rt-7.0.3.jar istack-commons-runtime-3.0.7.j
+ ar jaxb-runtime-2.3.1.jar junit-jupiter-engine-5.7.2.jar javax.persiste
+ nce-api-2.2.jar junit-platform-engine-1.7.2.jar classmate-1.5.1.jar che
+ cker-qual-3.5.0.jar apiguardian-api-1.1.0.jar asm-3.0.jar javax.activat
+ ion-api-1.2.0.jar opentest4j-1.2.0.jar hibernate-core-5.6.5.Final.jar j
+ unit-jupiter-api-5.7.2.jar jaxb-api-2.3.1.jar FastInfoset-1.2.15.jar ja
+ ndex-2.4.2.Final.jar postgresql-42.3.1.jar byte-buddy-1.12.7.jar annota
+ tions-20.1.0.jar stax-ex-1.8.jar jdom-1.0.jar forms-1.1-preview.jar
+
